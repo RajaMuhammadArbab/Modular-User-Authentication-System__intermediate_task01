@@ -65,3 +65,10 @@ Or register a new user via `/auth/register/` and verify through the console emai
 ---
 
 This project demonstrates modular coding with **routes, controllers, services, and middleware** while ensuring **secure authentication, validation, and password hashing**.  
+
+
+## Project-Demo
+<img width="1386" height="701" alt="2" src="https://github.com/user-attachments/assets/5fec6756-8e42-4dae-9a64-c61898b4d168" />
+<img width="1393" height="783" alt="3" src="https://github.com/user-attachments/assets/d80ac950-0920-4ba2-b136-d5d1a5eb9427" />
+<img width="1379" height="588" alt="4" src="https://github.com/user-attachments/assets/e8db0f63-7447-4844-b9fe-9c9ea0c19ab9" />
+
