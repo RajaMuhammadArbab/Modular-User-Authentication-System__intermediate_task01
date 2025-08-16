@@ -6,6 +6,7 @@ from django.core.exceptions import ValidationError
 from django.contrib.auth import get_user_model
 from .services import register_user, login_user, blacklist_token
 from .utils import decode_jwt
+from django.views.decorators.csrf import csrf_exempt
 
 User = get_user_model()
 
@@ -16,6 +17,7 @@ def parse_body(request):
     except Exception:
         return {}
 
+@csrf_exempt
 @require_POST
 def register(request):
     data = parse_body(request)
@@ -37,6 +39,7 @@ def register(request):
     except ValidationError as e:
         return JsonResponse({"success": False, "error": str(e)}, status=400)
 
+@csrf_exempt
 @require_POST
 def login(request):
     data = parse_body(request)
@@ -63,6 +66,7 @@ def login(request):
     except ValidationError as e:
         return JsonResponse({"success": False, "error": str(e)}, status=400)
 
+@csrf_exempt
 @require_POST
 def logout(request):
     
@@ -79,3 +83,4 @@ def logout(request):
             pass 
 
     return JsonResponse({"success": True, "message": "Logout successful."})
+
